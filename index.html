@@ -8,14 +8,14 @@
 
 <style>
 :root {
-‎  /* 🌞 الوضع الفاتح (بيج أنيق) */
+  /* 🌞 الوضع الفاتح (بيج أنيق) */
   --bg: #f3e9d2;       
   --fg: #3e2f1c;       
   --accent: #b6893c;   
   --card: #f7f1e1;     
 }
 
-‎/* 🌙 الوضع الليلي (رمادي غامق وأخضر باهت) */
+/* 🌙 الوضع الليلي (رمادي غامق وأخضر باهت) */
 html[data-theme='dark'] {
   --bg: #1e1e1e;              
   --fg: #f0f0f0;              
@@ -34,7 +34,7 @@ body {
   direction: rtl;
 }
 
-‎/* ✅ شريط العنوان */
+/* ✅ شريط العنوان */
 header.topbar {
   display: flex;
   justify-content: space-between;
@@ -50,7 +50,7 @@ header.topbar h1 {
   margin: 0;
 }
 
-‎/* ✅ الأزرار */
+/* ✅ الأزرار */
 .btn {
   background: #fff;
   color: var(--accent);
@@ -67,7 +67,7 @@ header.topbar h1 {
   background: #f0f0f0;
 }
 
-‎/* أزرار الوضع الليلي */
+/* أزرار الوضع الليلي */
 html[data-theme='dark'] .btn {
   background: #333;
   color: var(--fg);
@@ -76,7 +76,7 @@ html[data-theme='dark'] .btn:hover {
   background: #444;
 }
 
-‎/* ✅ البسملة */
+/* ✅ البسملة */
 .bismillah {
   font-size: clamp(32px, 6vw, 48px);
   text-align: center;
@@ -84,7 +84,7 @@ html[data-theme='dark'] .btn:hover {
   color: var(--accent);
 }
 
-‎/* ✅ نصوص الآيات */
+/* ✅ نصوص الآيات */
 .ayahs {
   font-size: clamp(18px, 2.5vw, 26px); /* تكيف تلقائي حسب الشاشة */
   text-align: justify;
@@ -101,19 +101,19 @@ html[data-theme='dark'] .btn:hover {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-‎/* نص الآيات في الوضع الليلي */
+/* نص الآيات في الوضع الليلي */
 html[data-theme='dark'] .ayahs {
   color: var(--quran-text);
 }
 
-‎/* ✅ رقم الآية */
+/* ✅ رقم الآية */
 .num {
   color: var(--accent);
   font-size: 0.9em;
   margin: 0 4px;
 }
 
-‎/* ✅ الملاحظة */
+/* ✅ الملاحظة */
 .note {
   text-align: center;
   color: var(--accent);
@@ -121,7 +121,7 @@ html[data-theme='dark'] .ayahs {
   font-size: clamp(14px, 2vw, 16px);
 }
 
-‎/* ✅ التذييل */
+/* ✅ التذييل */
 footer.footer {
   text-align: center;
   padding: 20px;
@@ -132,7 +132,7 @@ footer.footer {
   font-size: clamp(14px, 1.5vw, 16px);
 }
 
-‎/* ✅ مشغل الصوت */
+/* ✅ مشغل الصوت */
 .player {
   display: flex;
   flex-direction: column;
@@ -148,7 +148,7 @@ audio {
   border-radius: 10px;
 }
 
-‎/* ✅ تحسين القراءة على الشاشات الصغيرة */
+/* ✅ تحسين القراءة على الشاشات الصغيرة */
 @media (max-width: 600px) {
   .ayahs {
     line-height: 2.4;
@@ -298,7 +298,7 @@ audio {
   <footer class="footer">جمعة مُباركة والله يكتب أجركم جميعًا</footer>
 
 <script>
-‎  // 🌙 التبديل بين الوضع الليلي والفاتح
+  // 🌙 التبديل بين الوضع الليلي والفاتح
   const html = document.documentElement;
   const themeBtn = document.getElementById('themeToggle');
 
@@ -317,7 +317,7 @@ audio {
     setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
   });
 
-‎  // 🎧 زر التشغيل والإيقاف للصوت
+  // 🎧 زر التشغيل والإيقاف للصوت
   const playBtn = document.getElementById('playAudio');
   const player = document.getElementById('player');
 
@@ -331,12 +331,12 @@ audio {
     }
   });
 
-‎  // ✅ تحديث الزر لما ينتهي الصوت
+  // ✅ تحديث الزر لما ينتهي الصوت
   player.addEventListener('ended', () => {
     playBtn.textContent = 'استماع';
   });
 
-‎  // 📤 زر المشاركة
+  // 📤 زر المشاركة
   const shareBtn = document.getElementById('shareBtn');
   shareBtn.addEventListener('click', async () => {
     const shareData = {
@@ -352,7 +352,7 @@ audio {
         console.error('تم إلغاء المشاركة أو حدث خطأ:', err);
       }
     } else {
-‎      // للمتصفحات اللي ما تدعم Web Share API
+      // للمتصفحات اللي ما تدعم Web Share API
       alert('المشاركة غير مدعومة في هذا المتصفح. انسخ الرابط يدويًا:\n' + window.location.href);
     }
   });
